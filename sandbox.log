@@ -1,0 +1,546 @@
+* docker-compose up -d
+Creating network "algorandtesting_default" with the default driver
+Building algod
+#1 [internal] load build definition from Dockerfile
+#1 sha256:b71f96dae13087796feec6e9262e8f61b098c0144da5d84f409bd4268df0e554
+#1 transferring dockerfile: 1.34kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:9114fdc8cff0cfa76d8f51390a90bd874059135da8d522a0db867b32a438bc55
+#2 transferring context: 67B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.14.7
+#3 sha256:6217e6d36d39fef8557c4ea10d435337af667b94e48b8a40d4a11e3a09d86edf
+#3 ...
+
+#4 [auth] library/golang:pull token for registry-1.docker.io
+#4 sha256:f67c52435e2ae824dcda5ea3dbb9dd0fe1e4c67c4d73cba8fd38d8ec85e85cfb
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.14.7
+#3 sha256:6217e6d36d39fef8557c4ea10d435337af667b94e48b8a40d4a11e3a09d86edf
+#3 DONE 1.5s
+
+#8 [internal] load build context
+#8 sha256:dcdf65508a3ab81879c813e2eef30319ab14ef2a729f5889d9ff4e7b4baf1051
+#8 transferring context: 113.38kB done
+#8 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/golang:1.14.7@sha256:d24a3944572a2c6d8ba204c2af605e04fd5487adb1ce64394f354ad2af4c9062
+#5 sha256:fe0900b2941df0c894d53c5c82f42c5e84af27b437845697858b98bcb5a8339f
+#5 resolve docker.io/library/golang:1.14.7@sha256:d24a3944572a2c6d8ba204c2af605e04fd5487adb1ce64394f354ad2af4c9062 done
+#5 sha256:0fc73a78e79dde6f21c2cfe487277ed245c4b0e478581867ffc3b64b360781fa 7.04kB / 7.04kB done
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 0B / 50.40MB 0.1s
+#5 sha256:c958d65b3090aefea91284d018b2a86530a3c8174b72616c4e76993c696a5797 0B / 7.81MB 0.1s
+#5 sha256:d24a3944572a2c6d8ba204c2af605e04fd5487adb1ce64394f354ad2af4c9062 2.36kB / 2.36kB done
+#5 sha256:0e79ff90590870e8327918cff47aacb71a7a83bcdf666dea4bcafda35594fb16 1.79kB / 1.79kB done
+#5 sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 0B / 10.00MB 0.1s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 3.15MB / 50.40MB 0.5s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 6.29MB / 50.40MB 0.7s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 13.63MB / 50.40MB 1.0s
+#5 sha256:c958d65b3090aefea91284d018b2a86530a3c8174b72616c4e76993c696a5797 2.10MB / 7.81MB 1.0s
+#5 sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 1.05MB / 10.00MB 1.0s
+#5 sha256:c958d65b3090aefea91284d018b2a86530a3c8174b72616c4e76993c696a5797 3.15MB / 7.81MB 1.1s
+#5 sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 2.10MB / 10.00MB 1.1s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 17.83MB / 50.40MB 1.2s
+#5 sha256:c958d65b3090aefea91284d018b2a86530a3c8174b72616c4e76993c696a5797 4.19MB / 7.81MB 1.2s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 22.02MB / 50.40MB 1.4s
+#5 sha256:c958d65b3090aefea91284d018b2a86530a3c8174b72616c4e76993c696a5797 7.34MB / 7.81MB 1.4s
+#5 sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 4.19MB / 10.00MB 1.4s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 25.17MB / 50.40MB 1.5s
+#5 sha256:c958d65b3090aefea91284d018b2a86530a3c8174b72616c4e76993c696a5797 7.81MB / 7.81MB 1.4s done
+#5 sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 5.24MB / 10.00MB 1.5s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 0B / 51.83MB 1.5s
+#5 sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 6.29MB / 10.00MB 1.6s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 31.46MB / 50.40MB 1.8s
+#5 sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 8.39MB / 10.00MB 1.8s
+#5 sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 10.00MB / 10.00MB 1.9s done
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 0B / 68.67MB 1.9s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 37.75MB / 50.40MB 2.1s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 6.29MB / 51.83MB 2.1s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 41.94MB / 50.40MB 2.3s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 10.49MB / 51.83MB 2.3s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 45.09MB / 50.40MB 2.5s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 14.68MB / 51.83MB 2.5s
+#5 sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 50.40MB / 50.40MB 2.8s done
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 19.92MB / 51.83MB 2.8s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 5.24MB / 68.67MB 2.8s
+#5 extracting sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 0B / 123.75MB 2.9s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 26.21MB / 51.83MB 3.1s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 10.49MB / 68.67MB 3.1s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 29.36MB / 51.83MB 3.3s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 15.73MB / 68.67MB 3.4s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 32.51MB / 51.83MB 3.5s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 37.75MB / 51.83MB 3.8s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 22.02MB / 68.67MB 3.8s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 8.39MB / 123.75MB 3.8s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 40.89MB / 51.83MB 4.0s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 26.21MB / 68.67MB 4.0s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 46.14MB / 51.83MB 4.3s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 15.73MB / 123.75MB 4.3s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 30.41MB / 68.67MB 4.4s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 50.33MB / 51.83MB 4.8s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 34.60MB / 68.67MB 4.8s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 22.02MB / 123.75MB 5.0s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 38.80MB / 68.67MB 5.1s
+#5 sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 51.83MB / 51.83MB 5.1s done
+#5 extracting sha256:d6ff36c9ec4822c9ff8953560f7ba41653b348a9c1136755e653575f58fbded7 2.3s done
+#5 sha256:55972a3ee861ffbdb78a44d96abbf760debec114df683836179b356ade7a8e4c 0B / 125B 5.2s
+#5 extracting sha256:c958d65b3090aefea91284d018b2a86530a3c8174b72616c4e76993c696a5797
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 42.99MB / 68.67MB 5.6s
+#5 extracting sha256:c958d65b3090aefea91284d018b2a86530a3c8174b72616c4e76993c696a5797 0.3s done
+#5 sha256:55972a3ee861ffbdb78a44d96abbf760debec114df683836179b356ade7a8e4c 125B / 125B 5.6s done
+#5 extracting sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 47.19MB / 68.67MB 5.8s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 52.43MB / 68.67MB 6.0s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 29.36MB / 123.75MB 6.0s
+#5 extracting sha256:edaf0a6b092f5673ec05b40edb606ce58881b2f40494251117d31805225ef064 0.3s done
+#5 extracting sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 58.72MB / 68.67MB 6.3s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 65.01MB / 68.67MB 6.6s
+#5 sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 68.67MB / 68.67MB 6.8s done
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 35.65MB / 123.75MB 6.9s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 41.94MB / 123.75MB 7.5s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 49.28MB / 123.75MB 8.1s
+#5 extracting sha256:80931cf6881673fd161a3fd73e8971fe4a569fd7fbb44e956d261ca58d97dfab 2.4s done
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 55.57MB / 123.75MB 8.7s
+#5 extracting sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 62.91MB / 123.75MB 9.3s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 69.21MB / 123.75MB 9.8s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 75.50MB / 123.75MB 10.6s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 81.79MB / 123.75MB 11.1s
+#5 extracting sha256:813643441356759e9202aeebde31d45192b5e5e6218cd8d2ad216304bf415551 2.7s done
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 88.08MB / 123.75MB 11.5s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 94.37MB / 123.75MB 11.9s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 100.66MB / 123.75MB 12.3s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 106.95MB / 123.75MB 12.7s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 113.25MB / 123.75MB 13.0s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 122.68MB / 123.75MB 13.6s
+#5 sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 123.75MB / 123.75MB 13.8s done
+#5 extracting sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018
+#5 extracting sha256:3a0abf3676a7a22dcf097f6432783bbbf95895679cdfe3f6c96a515b505f7018 5.1s done
+#5 extracting sha256:55972a3ee861ffbdb78a44d96abbf760debec114df683836179b356ade7a8e4c
+#5 extracting sha256:55972a3ee861ffbdb78a44d96abbf760debec114df683836179b356ade7a8e4c done
+#5 DONE 19.1s
+
+#6 [2/7] RUN echo "Installing from source.  -- "
+#6 sha256:e3e54403e3173350dd0bbbc529b8b94fc47743d1fa59f9b97a8c5f472fb9cfbe
+#6 0.238 Installing from source.  -- 
+#6 DONE 0.3s
+
+#7 [3/7] RUN apt-get update && apt-get install -y apt-utils curl git git-core bsdmainutils python3
+#7 sha256:6f0d54ddd4f5395efcd6a85cb89b75a6467f359a31b816b691c5148a206e00e2
+#7 0.562 Get:1 http://deb.debian.org/debian buster InRelease [122 kB]
+#7 0.562 Get:2 http://security.debian.org/debian-security buster/updates InRelease [65.4 kB]
+#7 0.645 Get:3 http://deb.debian.org/debian buster-updates InRelease [51.9 kB]
+#7 0.748 Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [268 kB]
+#7 0.839 Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7907 kB]
+#7 1.870 Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [9504 B]
+#7 2.793 Fetched 8423 kB in 2s (3644 kB/s)
+#7 2.793 Reading package lists...
+#7 3.315 Reading package lists...
+#7 3.831 Building dependency tree...
+#7 3.930 Reading state information...
+#7 4.020 curl is already the newest version (7.64.0-4+deb10u1).
+#7 4.020 git is already the newest version (1:2.20.1-2+deb10u3).
+#7 4.020 The following additional packages will be installed:
+#7 4.020   apt libapt-inst2.0 libmpdec2 libpython3-stdlib libpython3.7-minimal
+#7 4.020   libpython3.7-stdlib python3-minimal python3.7 python3.7-minimal
+#7 4.021 Suggested packages:
+#7 4.021   apt-doc aptitude | synaptic | wajig dpkg-dev powermgmt-base wamerican
+#7 4.021   | wordlist whois vacation python3-doc python3-tk python3-venv python3.7-venv
+#7 4.021   python3.7-doc binfmt-support
+#7 4.114 The following NEW packages will be installed:
+#7 4.115   apt-utils bsdmainutils libapt-inst2.0 libmpdec2 libpython3-stdlib
+#7 4.115   libpython3.7-minimal libpython3.7-stdlib python3 python3-minimal python3.7
+#7 4.115   python3.7-minimal
+#7 4.116 The following packages will be upgraded:
+#7 4.117   apt
+#7 4.187 1 upgraded, 11 newly installed, 0 to remove and 22 not upgraded.
+#7 4.187 Need to get 6821 kB of archives.
+#7 4.187 After this operation, 25.5 MB of additional disk space will be used.
+#7 4.187 Get:1 http://deb.debian.org/debian buster/main amd64 apt amd64 1.8.2.2 [1419 kB]
+#7 4.471 Get:2 http://deb.debian.org/debian buster/main amd64 libpython3.7-minimal amd64 3.7.3-2+deb10u2 [589 kB]
+#7 4.527 Get:3 http://deb.debian.org/debian buster/main amd64 python3.7-minimal amd64 3.7.3-2+deb10u2 [1731 kB]
+#7 4.666 Get:4 http://deb.debian.org/debian buster/main amd64 python3-minimal amd64 3.7.3-1 [36.6 kB]
+#7 4.678 Get:5 http://deb.debian.org/debian buster/main amd64 libmpdec2 amd64 2.4.2-2 [87.2 kB]
+#7 4.680 Get:6 http://deb.debian.org/debian buster/main amd64 libpython3.7-stdlib amd64 3.7.3-2+deb10u2 [1732 kB]
+#7 4.814 Get:7 http://deb.debian.org/debian buster/main amd64 python3.7 amd64 3.7.3-2+deb10u2 [330 kB]
+#7 4.851 Get:8 http://deb.debian.org/debian buster/main amd64 libpython3-stdlib amd64 3.7.3-1 [20.0 kB]
+#7 4.856 Get:9 http://deb.debian.org/debian buster/main amd64 python3 amd64 3.7.3-1 [61.5 kB]
+#7 4.860 Get:10 http://deb.debian.org/debian buster/main amd64 libapt-inst2.0 amd64 1.8.2.2 [204 kB]
+#7 4.891 Get:11 http://deb.debian.org/debian buster/main amd64 apt-utils amd64 1.8.2.2 [421 kB]
+#7 4.947 Get:12 http://deb.debian.org/debian buster/main amd64 bsdmainutils amd64 11.1.2+b1 [191 kB]
+#7 5.109 debconf: delaying package configuration, since apt-utils is not installed
+#7 5.129 Fetched 6821 kB in 1s (8130 kB/s)
+#7 5.150 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15410 files and directories currently installed.)
+#7 5.190 Preparing to unpack .../archives/apt_1.8.2.2_amd64.deb ...
+#7 5.215 Unpacking apt (1.8.2.2) over (1.8.2.1) ...
+#7 5.507 Setting up apt (1.8.2.2) ...
+#7 5.781 Selecting previously unselected package libpython3.7-minimal:amd64.
+#7 5.781 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15410 files and directories currently installed.)
+#7 5.789 Preparing to unpack .../libpython3.7-minimal_3.7.3-2+deb10u2_amd64.deb ...
+#7 5.790 Unpacking libpython3.7-minimal:amd64 (3.7.3-2+deb10u2) ...
+#7 5.862 Selecting previously unselected package python3.7-minimal.
+#7 5.864 Preparing to unpack .../python3.7-minimal_3.7.3-2+deb10u2_amd64.deb ...
+#7 5.869 Unpacking python3.7-minimal (3.7.3-2+deb10u2) ...
+#7 6.047 Setting up libpython3.7-minimal:amd64 (3.7.3-2+deb10u2) ...
+#7 6.053 Setting up python3.7-minimal (3.7.3-2+deb10u2) ...
+#7 6.424 Selecting previously unselected package python3-minimal.
+#7 6.424 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15650 files and directories currently installed.)
+#7 6.432 Preparing to unpack .../python3-minimal_3.7.3-1_amd64.deb ...
+#7 6.433 Unpacking python3-minimal (3.7.3-1) ...
+#7 6.452 Selecting previously unselected package libmpdec2:amd64.
+#7 6.453 Preparing to unpack .../libmpdec2_2.4.2-2_amd64.deb ...
+#7 6.454 Unpacking libmpdec2:amd64 (2.4.2-2) ...
+#7 6.476 Selecting previously unselected package libpython3.7-stdlib:amd64.
+#7 6.477 Preparing to unpack .../libpython3.7-stdlib_3.7.3-2+deb10u2_amd64.deb ...
+#7 6.479 Unpacking libpython3.7-stdlib:amd64 (3.7.3-2+deb10u2) ...
+#7 6.644 Selecting previously unselected package python3.7.
+#7 6.646 Preparing to unpack .../python3.7_3.7.3-2+deb10u2_amd64.deb ...
+#7 6.648 Unpacking python3.7 (3.7.3-2+deb10u2) ...
+#7 6.674 Selecting previously unselected package libpython3-stdlib:amd64.
+#7 6.675 Preparing to unpack .../libpython3-stdlib_3.7.3-1_amd64.deb ...
+#7 6.677 Unpacking libpython3-stdlib:amd64 (3.7.3-1) ...
+#7 6.698 Setting up python3-minimal (3.7.3-1) ...
+#7 6.836 Selecting previously unselected package python3.
+#7 6.836 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 16062 files and directories currently installed.)
+#7 6.844 Preparing to unpack .../python3_3.7.3-1_amd64.deb ...
+#7 6.849 Unpacking python3 (3.7.3-1) ...
+#7 6.870 Selecting previously unselected package libapt-inst2.0:amd64.
+#7 6.871 Preparing to unpack .../libapt-inst2.0_1.8.2.2_amd64.deb ...
+#7 6.873 Unpacking libapt-inst2.0:amd64 (1.8.2.2) ...
+#7 6.901 Selecting previously unselected package apt-utils.
+#7 6.903 Preparing to unpack .../apt-utils_1.8.2.2_amd64.deb ...
+#7 6.904 Unpacking apt-utils (1.8.2.2) ...
+#7 6.948 Selecting previously unselected package bsdmainutils.
+#7 6.949 Preparing to unpack .../bsdmainutils_11.1.2+b1_amd64.deb ...
+#7 6.950 Unpacking bsdmainutils (11.1.2+b1) ...
+#7 6.997 Setting up libapt-inst2.0:amd64 (1.8.2.2) ...
+#7 7.001 Setting up bsdmainutils (11.1.2+b1) ...
+#7 7.012 update-alternatives: using /usr/bin/bsd-write to provide /usr/bin/write (write) in auto mode
+#7 7.014 update-alternatives: using /usr/bin/bsd-from to provide /usr/bin/from (from) in auto mode
+#7 7.017 Setting up libmpdec2:amd64 (2.4.2-2) ...
+#7 7.021 Setting up libpython3.7-stdlib:amd64 (3.7.3-2+deb10u2) ...
+#7 7.027 Setting up apt-utils (1.8.2.2) ...
+#7 7.031 Setting up libpython3-stdlib:amd64 (3.7.3-1) ...
+#7 7.035 Setting up python3.7 (3.7.3-2+deb10u2) ...
+#7 7.556 Setting up python3 (3.7.3-1) ...
+#7 7.630 Processing triggers for libc-bin (2.28-10) ...
+#7 7.700 Processing triggers for mime-support (3.62) ...
+#7 DONE 7.8s
+
+#9 [4/7] COPY . /tmp
+#9 sha256:dbcb55c21eb1194bcb1d41e95f6e401742741fe91b6401206b53283b492e3859
+#9 DONE 0.0s
+
+#10 [5/7] RUN /tmp/images/algod/install.sh     -d "/node"     -c "stable"     -u ""     -b ""     -s ""
+#10 sha256:c359ae9a84a31031779040d67f22f393a7e87434474edd166bca3118fa805847
+#10 0.240 /tmp/images/algod /go
+#10 0.240 Installing algod with options:
+#10 0.240   BINDIR = /node
+#10 0.240   CHANNEL = stable
+#10 0.240   URL = 
+#10 0.240   BRANCH = 
+#10 0.240   SHA = 
+#10 0.250 Current Version = 0
+#10 4.201 updater
+#10 4.373 updater binary was downloaded
+#10 4.736 Latest Version = 8590196737
+#10 4.736 New version found
+#10 4.746 Checking for files matching: 'channel/stable/node_stable_linux-amd64_' in bucket algorand-releases
+#10 21.15 Update Downloaded to /tmp/tmp.TDyK2ZJbPV/8590196737.tar.gz
+#10 21.15 Expanding update...
+#10 23.75 Validating update...
+#10 23.75 Starting the new update script to complete the installation...
+#10 23.76 ... Resuming installation from the latest update script
+#10 23.76 Current Version = 0
+#10 23.76 Stopping node...
+#10 23.76 ... node not running
+#10 23.76 Backing up current binary files...
+#10 23.77 Backing up current data files from /node/data...
+#10 23.77 Installing new binary files...
+#10 24.28 Installing new data files into /node/data...
+#10 24.28 Copying genesis files locally
+#10 24.28 Checking for new ledger in /node/data
+#10 24.37 Cannot read genesis file /node/data/genesis.json: open /node/data/genesis.json: no such file or directory
+#10 24.37 Updating genesis files for default network
+#10 24.40 New genesis ID, resetting wallets
+#10 24.40 New Ledger - restoring genesis accounts in /node/data
+#10 24.40 New Ledger - importing rootkeys for genesis accounts
+#10 24.52 Imported 0 keys
+#10 24.52 Applying migration fixups...
+#10 24.53 Deleting existing log files in /node/data
+#10 24.53 Install complete - restart node manually
+#10 DONE 25.2s
+
+#11 [6/7] RUN /tmp/images/algod/setup.py  --bin-dir "/node"  --data-dir "/opt/data"  --start-script "/opt/start_algod.sh"  --network-dir "/opt/testnetwork"  --network-template "/tmp/images/algod/future_template.json"  --network-token "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"  --algod-port "4001"  --kmd-port "4002"  --bootstrap-url ""  --genesis-file "/tmp/"
+#11 sha256:d7dfec4b6e56bdcb5436e216826222d64fcdef3f16bd2e78c616ae96aaf6c149
+#11 0.346 Created new rootkey: /opt/testnetwork/Wallet1.rootkey
+#11 0.346 Created new rootkey: /opt/testnetwork/Wallet2.rootkey
+#11 0.346 Created new rootkey: /opt/testnetwork/Wallet4.rootkey
+#11 0.347 Created new rootkey: /opt/testnetwork/Wallet3.rootkey
+#11 0.366 Created new partkey: /opt/testnetwork/Wallet1.0.3000000.partkey
+#11 0.366 Created new partkey: /opt/testnetwork/Wallet2.0.3000000.partkey
+#11 0.366 future 100000
+#11 3.297 Network sandnet created under /opt/testnetwork
+#11 3.300 Configuring network with the following arguments:
+#11 3.300 {   'algod_port': '4001',
+#11 3.300     'bin_dir': '/node',
+#11 3.300     'bootstrap_url': '',
+#11 3.300     'data_dir': '/opt/data',
+#11 3.300     'genesis_file': '/tmp/',
+#11 3.300     'kmd_port': '4002',
+#11 3.300     'network_dir': '/opt/testnetwork',
+#11 3.300     'network_template': '/tmp/images/algod/future_template.json',
+#11 3.300     'network_token': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+#11 3.300     'start_script': '/opt/start_algod.sh'}
+#11 3.300 Creating a private network.
+#11 3.300 Start commands for /opt/start_algod.sh:
+#11 3.300 [   '/node/goal network start -r /opt/testnetwork',
+#11 3.300     '/node/kmd start -t 0 -d /opt/testnetwork/Node/kmd-v0.5']
+#11 3.300 Creating symlink /opt/data -> /opt/testnetwork/Node
+#11 DONE 3.4s
+
+#12 [7/7] WORKDIR /opt/data
+#12 sha256:fd08b575e4e0650e86528052291487358332a031383ad7be2a56944d8e0b5b61
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#13 exporting layers
+#13 exporting layers 1.4s done
+#13 writing image sha256:af2f50f266e1a9f5e1f1d2e1ad1933a766c20341e465b1d5346b972ea7285578 done
+#13 naming to docker.io/library/algorandtesting_algod done
+#13 DONE 1.4s
+Successfully built af2f50f266e1a9f5e1f1d2e1ad1933a766c20341e465b1d5346b972ea7285578
+Image for service algod was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Pulling indexer-db (postgres:13-alpine)...
+13-alpine: Pulling from library/postgres
+Digest: sha256:d7f4c46ada617bca23a582b2f42499ca27767f33e0b8f7607553dcff5d493640
+Status: Downloaded newer image for postgres:13-alpine
+Building indexer
+#1 [internal] load build definition from Dockerfile
+#1 sha256:73309007957a85ced989c9c2ea616559794ad2cf6d3a4b1d5068c440df0b3f29
+#1 transferring dockerfile: 550B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:206c1dfb1a158f1675e8b42f5f6bd09b315b4fcd1910ff3cee54f1ba76e9835b
+#2 transferring context: 34B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/golang:1.13.12-alpine
+#3 sha256:c1fe377998185b5d71203b5570984870769149b92336d99304a9cbe4ae5a175e
+#3 DONE 1.3s
+
+#7 [internal] load build context
+#7 sha256:91525579768cc76782b98807f19a6e3890b0f3866cbfc4c17ee42b2c4d64b566
+#7 transferring context: 362B done
+#7 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/golang:1.13.12-alpine@sha256:4c475018cc22a3c1b1e42806467be68c61beef9f94cb4533960f5fdd53f631b4
+#4 sha256:932460da40bd4c16710fc9bcd60b2ad0ea32b12af90d321b84bbe38b3659f056
+#4 resolve docker.io/library/golang:1.13.12-alpine@sha256:4c475018cc22a3c1b1e42806467be68c61beef9f94cb4533960f5fdd53f631b4 done
+#4 sha256:4c475018cc22a3c1b1e42806467be68c61beef9f94cb4533960f5fdd53f631b4 1.65kB / 1.65kB done
+#4 sha256:90e2f8cc39f2bb8450c45b41580b285ca4c177b3c9c7fe0015732ba010c68a2b 1.36kB / 1.36kB done
+#4 sha256:cea245765db1a405a8511d96d147f5161c55f225515c3929dfcf215048add463 3.83kB / 3.83kB done
+#4 sha256:df20fa9351a15782c64e6dddb2d4a6f50bf6d3688060a34c4014b0d9a752eb4c 0B / 2.80MB 0.1s
+#4 sha256:ed8968b2872e472e21554ca58b35a02277634f3e501cc04ab7b0d0963f60f54d 0B / 282.60kB 0.1s
+#4 sha256:a92cc7c5fd73817407fa0e4de5e1fb262a9c0f34c35c7450a2d01a7cef79c62f 0B / 155B 0.1s
+#4 sha256:df20fa9351a15782c64e6dddb2d4a6f50bf6d3688060a34c4014b0d9a752eb4c 1.05MB / 2.80MB 0.4s
+#4 sha256:df20fa9351a15782c64e6dddb2d4a6f50bf6d3688060a34c4014b0d9a752eb4c 2.10MB / 2.80MB 0.7s
+#4 sha256:a92cc7c5fd73817407fa0e4de5e1fb262a9c0f34c35c7450a2d01a7cef79c62f 155B / 155B 0.7s done
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 0B / 126.96MB 0.7s
+#4 sha256:df20fa9351a15782c64e6dddb2d4a6f50bf6d3688060a34c4014b0d9a752eb4c 2.80MB / 2.80MB 0.7s done
+#4 sha256:ed8968b2872e472e21554ca58b35a02277634f3e501cc04ab7b0d0963f60f54d 282.60kB / 282.60kB 0.8s done
+#4 extracting sha256:df20fa9351a15782c64e6dddb2d4a6f50bf6d3688060a34c4014b0d9a752eb4c 0.1s
+#4 sha256:e5ffe4cf9f04433b1e030067c4d129ea3821af101c597980cfeb846f7efea799 0B / 126B 0.8s
+#4 extracting sha256:df20fa9351a15782c64e6dddb2d4a6f50bf6d3688060a34c4014b0d9a752eb4c 0.2s done
+#4 sha256:e5ffe4cf9f04433b1e030067c4d129ea3821af101c597980cfeb846f7efea799 126B / 126B 0.8s done
+#4 extracting sha256:ed8968b2872e472e21554ca58b35a02277634f3e501cc04ab7b0d0963f60f54d
+#4 extracting sha256:ed8968b2872e472e21554ca58b35a02277634f3e501cc04ab7b0d0963f60f54d 0.1s done
+#4 extracting sha256:a92cc7c5fd73817407fa0e4de5e1fb262a9c0f34c35c7450a2d01a7cef79c62f done
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 8.39MB / 126.96MB 1.5s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 15.73MB / 126.96MB 2.1s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 23.07MB / 126.96MB 2.7s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 30.41MB / 126.96MB 3.1s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 37.75MB / 126.96MB 3.4s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 48.23MB / 126.96MB 4.0s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 55.57MB / 126.96MB 4.4s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 63.96MB / 126.96MB 4.9s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 71.30MB / 126.96MB 5.3s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 78.64MB / 126.96MB 6.1s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 85.98MB / 126.96MB 6.7s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 93.32MB / 126.96MB 7.5s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 101.71MB / 126.96MB 8.5s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 110.10MB / 126.96MB 9.8s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 117.44MB / 126.96MB 11.2s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 124.78MB / 126.96MB 12.0s
+#4 sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 126.96MB / 126.96MB 12.4s done
+#4 extracting sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752
+#4 extracting sha256:e9b686f23470bc8eab4c3afc6da133e5ff7dc010c2ce3f58564e1bcd3cecd752 5.1s done
+#4 extracting sha256:e5ffe4cf9f04433b1e030067c4d129ea3821af101c597980cfeb846f7efea799 done
+#4 DONE 17.8s
+
+#5 [2/7] WORKDIR /opt/indexer
+#5 sha256:bbe026ca7d4e109ecb29d6f5b5757e80961d093aba47eef3db4308926b01c3a9
+#5 DONE 0.1s
+
+#6 [3/7] RUN apk add --no-cache git bzip2 make bash
+#6 sha256:96e505a74b883b1aef4d787445604af6fea559603d002735f66d8145f4142498
+#6 0.249 fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/main/x86_64/APKINDEX.tar.gz
+#6 0.701 fetch http://dl-cdn.alpinelinux.org/alpine/v3.12/community/x86_64/APKINDEX.tar.gz
+#6 1.111 (1/11) Installing ncurses-terminfo-base (6.2_p20200523-r0)
+#6 1.152 (2/11) Installing ncurses-libs (6.2_p20200523-r0)
+#6 1.233 (3/11) Installing readline (8.0.4-r0)
+#6 1.276 (4/11) Installing bash (5.0.17-r0)
+#6 1.373 Executing bash-5.0.17-r0.post-install
+#6 1.375 (5/11) Installing bzip2 (1.0.8-r1)
+#6 1.643 (6/11) Installing nghttp2-libs (1.41.0-r0)
+#6 1.680 (7/11) Installing libcurl (7.69.1-r3)
+#6 1.734 (8/11) Installing expat (2.2.9-r1)
+#6 1.770 (9/11) Installing pcre2 (10.35-r0)
+#6 1.838 (10/11) Installing git (2.26.3-r0)
+#6 3.063 (11/11) Installing make (4.3-r0)
+#6 3.110 Executing busybox-1.31.1-r16.trigger
+#6 3.114 OK: 24 MiB in 26 packages
+#6 DONE 3.2s
+
+#8 [4/7] COPY images/indexer/disabled.go /tmp/disabled.go
+#8 sha256:baeab86bce2c2844057623aa823ea5df94dc09d06ed1b670a19a59a25ccb5e93
+#8 DONE 0.0s
+
+#9 [5/7] COPY images/indexer/start.sh /tmp/start.sh
+#9 sha256:a7b4330c79411a1432c70451a24e68eefceb8b4f2bc7a9a3a520be4d24da8e8c
+#9 DONE 0.0s
+
+#10 [6/7] COPY images/indexer/install.sh /tmp/install.sh
+#10 sha256:309d1d36df63c90f840f7f03224f77c3089f895fad8cc1a1c645ee82435ab121
+#10 DONE 0.0s
+
+#11 [7/7] RUN /tmp/install.sh
+#11 sha256:e06c169aaec94a6da0bbcdddaa3e82f66c7fd969fb739c062ca10a64b401f97d
+#11 0.224 Cloning into '/opt/indexer'...
+#11 1.632 cd cmd/algorand-indexer && CGO_ENABLED=0 go build -ldflags="-X github.com/algorand/indexer/version.Hash=45db0e5d5f8e053a1250e49c276b169c12f00e3a -X github.com/algorand/indexer/version.Dirty=true -X github.com/algorand/indexer/version.CompileTime=2021-03-16T07:11:27+0000 -X github.com/algorand/indexer/version.GitDecorateBase64=SEVBRCAtPiBtYXN0ZXIsIG9yaWdpbi9tYXN0ZXIK -X github.com/algorand/indexer/version.ReleaseVersion=2.3.1"
+#11 6.912 go: downloading github.com/spf13/cobra v0.0.5
+#11 6.914 go: downloading github.com/spf13/viper v1.7.1
+#11 6.914 go: downloading github.com/algorand/go-algorand-sdk v1.5.1
+#11 6.914 go: downloading github.com/sirupsen/logrus v1.5.0
+#11 6.914 go: downloading github.com/spf13/pflag v1.0.5
+#11 6.917 go: downloading github.com/algorand/go-codec v1.1.7
+#11 6.920 go: downloading github.com/labstack/echo/v4 v4.1.16
+#11 6.921 go: downloading github.com/lib/pq v1.5.1
+#11 7.069 go: extracting github.com/spf13/viper v1.7.1
+#11 7.074 go: extracting github.com/spf13/pflag v1.0.5
+#11 7.077 go: downloading github.com/hashicorp/hcl v1.0.0
+#11 7.127 go: extracting github.com/spf13/cobra v0.0.5
+#11 7.132 go: extracting github.com/algorand/go-codec v1.1.7
+#11 7.132 go: downloading github.com/algorand/go-codec/codec v1.1.7
+#11 7.136 go: extracting github.com/sirupsen/logrus v1.5.0
+#11 7.140 go: downloading github.com/spf13/afero v1.2.2
+#11 7.142 go: downloading github.com/pelletier/go-toml v1.4.0
+#11 7.184 go: extracting github.com/algorand/go-algorand-sdk v1.5.1
+#11 7.197 go: downloading github.com/getkin/kin-openapi v0.19.0
+#11 7.197 go: downloading github.com/fsnotify/fsnotify v1.4.9
+#11 7.232 go: extracting github.com/lib/pq v1.5.1
+#11 7.240 go: downloading github.com/mitchellh/mapstructure v1.1.2
+#11 7.246 go: extracting github.com/labstack/echo/v4 v4.1.16
+#11 7.258 go: extracting github.com/hashicorp/hcl v1.0.0
+#11 7.259 go: downloading github.com/dgrijalva/jwt-go v3.2.0+incompatible
+#11 7.259 go: downloading github.com/subosito/gotenv v1.2.0
+#11 7.270 go: downloading github.com/algorand/oapi-codegen v1.3.5-algorand5
+#11 7.270 go: downloading github.com/magiconair/properties v1.8.1
+#11 7.281 go: extracting github.com/spf13/afero v1.2.2
+#11 7.282 go: extracting github.com/pelletier/go-toml v1.4.0
+#11 7.284 go: extracting github.com/fsnotify/fsnotify v1.4.9
+#11 7.286 go: downloading gopkg.in/yaml.v2 v2.3.0
+#11 7.289 go: downloading github.com/valyala/fasttemplate v1.2.0
+#11 7.290 go: downloading github.com/spf13/cast v1.3.0
+#11 7.329 go: extracting github.com/subosito/gotenv v1.2.0
+#11 7.330 go: extracting github.com/mitchellh/mapstructure v1.1.2
+#11 7.333 go: downloading golang.org/x/crypto v0.0.0-20200728195943-123391ffb6de
+#11 7.333 go: downloading golang.org/x/text v0.3.3
+#11 7.343 go: extracting github.com/dgrijalva/jwt-go v3.2.0+incompatible
+#11 7.343 go: extracting github.com/magiconair/properties v1.8.1
+#11 7.347 go: downloading github.com/labstack/gommon v0.3.0
+#11 7.351 go: extracting github.com/algorand/go-codec/codec v1.1.7
+#11 7.366 go: downloading github.com/spf13/jwalterweatherman v1.0.0
+#11 7.372 go: extracting github.com/spf13/cast v1.3.0
+#11 7.376 go: extracting gopkg.in/yaml.v2 v2.3.0
+#11 7.376 go: extracting github.com/algorand/oapi-codegen v1.3.5-algorand5
+#11 7.382 go: downloading github.com/google/go-querystring v1.0.0
+#11 7.382 go: extracting github.com/valyala/fasttemplate v1.2.0
+#11 7.389 go: downloading golang.org/x/net v0.0.0-20200822124328-c89045814202
+#11 7.395 go: extracting github.com/getkin/kin-openapi v0.19.0
+#11 7.432 go: extracting github.com/labstack/gommon v0.3.0
+#11 7.434 go: downloading github.com/ghodss/yaml v1.0.0
+#11 7.434 go: downloading github.com/valyala/bytebufferpool v1.0.0
+#11 7.435 go: downloading golang.org/x/sys v0.0.0-20200803210538-64077c9b5642
+#11 7.821 go: extracting github.com/google/go-querystring v1.0.0
+#11 7.959 go: extracting github.com/ghodss/yaml v1.0.0
+#11 7.960 go: extracting github.com/spf13/jwalterweatherman v1.0.0
+#11 7.960 go: extracting github.com/valyala/bytebufferpool v1.0.0
+#11 7.962 go: downloading github.com/mattn/go-colorable v0.1.7
+#11 7.963 go: downloading github.com/mattn/go-isatty v0.0.12
+#11 8.010 go: extracting golang.org/x/crypto v0.0.0-20200728195943-123391ffb6de
+#11 8.061 go: downloading gopkg.in/ini.v1 v1.51.0
+#11 8.248 go: extracting golang.org/x/net v0.0.0-20200822124328-c89045814202
+#11 8.250 go: extracting golang.org/x/sys v0.0.0-20200803210538-64077c9b5642
+#11 8.334 go: extracting github.com/mattn/go-colorable v0.1.7
+#11 8.337 go: extracting github.com/mattn/go-isatty v0.0.12
+#11 8.359 go: extracting gopkg.in/ini.v1 v1.51.0
+#11 8.634 go: extracting golang.org/x/text v0.3.3
+#11 8.916 go: finding github.com/algorand/go-algorand-sdk v1.5.1
+#11 8.918 go: finding github.com/sirupsen/logrus v1.5.0
+#11 8.919 go: finding github.com/spf13/cobra v0.0.5
+#11 8.921 go: finding github.com/spf13/viper v1.7.1
+#11 8.951 go: finding github.com/spf13/pflag v1.0.5
+#11 8.960 go: finding github.com/fsnotify/fsnotify v1.4.9
+#11 8.963 go: finding github.com/algorand/go-codec/codec v1.1.7
+#11 8.963 go: finding golang.org/x/sys v0.0.0-20200803210538-64077c9b5642
+#11 8.965 go: finding github.com/hashicorp/hcl v1.0.0
+#11 8.981 go: finding golang.org/x/crypto v0.0.0-20200728195943-123391ffb6de
+#11 8.987 go: finding github.com/magiconair/properties v1.8.1
+#11 8.990 go: finding github.com/mitchellh/mapstructure v1.1.2
+#11 8.990 go: finding github.com/google/go-querystring v1.0.0
+#11 9.011 go: finding github.com/algorand/oapi-codegen v1.3.5-algorand5
+#11 9.011 go: finding github.com/pelletier/go-toml v1.4.0
+#11 9.011 go: finding github.com/labstack/echo/v4 v4.1.16
+#11 9.012 go: finding github.com/getkin/kin-openapi v0.19.0
+#11 9.024 go: finding github.com/spf13/afero v1.2.2
+#11 9.040 go: finding github.com/lib/pq v1.5.1
+#11 9.042 go: finding github.com/spf13/cast v1.3.0
+#11 9.158 go: finding github.com/spf13/jwalterweatherman v1.0.0
+#11 9.159 go: finding github.com/subosito/gotenv v1.2.0
+#11 9.159 go: finding github.com/labstack/gommon v0.3.0
+#11 9.160 go: finding golang.org/x/text v0.3.3
+#11 9.161 go: finding github.com/ghodss/yaml v1.0.0
+#11 9.162 go: finding gopkg.in/yaml.v2 v2.3.0
+#11 9.162 go: finding gopkg.in/ini.v1 v1.51.0
+#11 9.163 go: finding github.com/dgrijalva/jwt-go v3.2.0+incompatible
+#11 9.224 go: finding github.com/mattn/go-colorable v0.1.7
+#11 9.226 go: finding github.com/valyala/fasttemplate v1.2.0
+#11 9.226 go: finding golang.org/x/net v0.0.0-20200822124328-c89045814202
+#11 9.227 go: finding github.com/mattn/go-isatty v0.0.12
+#11 9.275 go: finding github.com/valyala/bytebufferpool v1.0.0
+#11 DONE 17.8s
+
+#12 exporting to image
+#12 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#12 exporting layers
+#12 exporting layers 1.3s done
+#12 writing image sha256:b5e74f9c86edb64e2a2529c7658b7282079fd762d7bbee9f8f1c5e7344533dbc done
+#12 naming to docker.io/library/algorandtesting_indexer done
+#12 DONE 1.3s
+Successfully built b5e74f9c86edb64e2a2529c7658b7282079fd762d7bbee9f8f1c5e7344533dbc
+Image for service indexer was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating algorand-sandbox-postgres ... 
+Creating algorand-sandbox-algod    ... 
+Creating algorand-sandbox-postgres ... done
+Creating algorand-sandbox-algod    ... done
+Creating algorand-sandbox-indexer  ... 
+Creating algorand-sandbox-indexer  ... done
